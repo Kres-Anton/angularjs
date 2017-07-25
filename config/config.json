@@ -1,0 +1,22 @@
+{
+  "port": "3000",
+  "mongoose":{
+    "uri":"mongodb://localhost/recipte",
+    "options":{
+      "server":{
+        "socketOptions":{
+          "keepAlive":1
+        }
+      }
+    }
+  },
+  "session":{
+    "secret":"angularHarallio",
+    "key":"sid",
+    "cookie":{
+      "path":"/",
+      "maxAge":null,
+      "httpOnly":true
+    }
+  }
+}
