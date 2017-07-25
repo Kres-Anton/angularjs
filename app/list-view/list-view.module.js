@@ -1,1 +1,1 @@
-angular.module('listView', ['menuView' ]);
+angular.module('listView', []);

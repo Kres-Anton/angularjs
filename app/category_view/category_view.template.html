@@ -1,0 +1,9 @@
+<div class="categoryView col-md-2">
+    <div class="well">
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-repeat="category in $ctrl.categories.data">
+                <button type="button" class="btn btn-lg" ng-click="$ctrl.selectCategory(category)">{{category.name}}</button>
+            </li>
+        </ul>
+    </div>
+</div>

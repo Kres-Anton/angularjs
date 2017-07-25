@@ -5,5 +5,6 @@ angular.module('recipteList', [
     'ngRoute',
     'mainView',
     'menuView',
-    'listView'
+    'listView',
+    'categoryView'
 ]);
