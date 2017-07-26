@@ -2,12 +2,9 @@ angular.
 module('categoryView',[]).
 component('categoryView', {
     templateUrl: 'category-view/category-view.template.html',
-    controller: function categoryViewControler($http){
+    controller: function categoryViewControler($http,$scope){
         var store = this;
-        store.list=[];
-        store.selectedCategory={};
-
-
+        store.categories=[];
 
         $http.get('/category').then(function(value){
             store.categories=value;
@@ -16,12 +13,10 @@ component('categoryView', {
         });
 
         store.selectCategory=function (category){
-            store.selectedCategory=category;
+            $scope.$parent.$ctrl.selectedCategory=category ;
         };
 
-        store.isSet=function (category){
-            return store.selectedCategory._id===category;
-        };
+
 
     }
 });
