@@ -16,6 +16,9 @@ config(['$locationProvider' ,'$routeProvider',
         when('/list', {
             template: '<list-view></list-view>'
         }).
+        when('/registration', {
+            template: '<registration-view></registration-view>'
+        }).
         otherwise('/');
     }
 ]);

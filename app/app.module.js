@@ -6,5 +6,6 @@ angular.module('recipteList', [
     'mainView',
     'menuView',
     'listView',
-    'categoryView'
+    'categoryView',
+    'registrationView'
 ]);

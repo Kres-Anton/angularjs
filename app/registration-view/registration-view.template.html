@@ -1,0 +1,35 @@
+<menu-view></menu-view>
+
+<div class="container col-lg-4 col-md-offset-4 registrationForm">
+    <form>
+        <div class="form-group" ng-class="{'has-error': !$ctrl.name.validResult}">
+            <label class="form-control-label" ng-class="{'has-error': !$ctrl.name.validResult}" for="name">user name:</label>
+            <input type="text" class="form-control" id="name" ng-model="$ctrl.name.text">
+            <div class="form-text">{{$ctrl.name.feedback}}</div>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': !$ctrl.email.validResult}">
+
+            <label class="form-control-label" ng-class="{'has-error': !$ctrl.email.validResult}" for="email">e-mail:</label>
+            <input type="text" class="form-control" id="email" ng-model="$ctrl.email.text">
+            <small class="form-text text-muted">{{$ctrl.email.feedback}}</small>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': !$ctrl.pwd.validResult}">
+
+            <label class="form-control-label" ng-class="{'has-error': !$ctrl.pwd.validResult}" for="pwd">password:</label>
+            <input type="password" class="form-control" id="pwd" ng-model="$ctrl.pwd.text">
+            <small class="form-text text-muted">{{$ctrl.pwd.feedback}}</small>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': !$ctrl.cpwd.validResult}">
+
+            <label class="form-control-label" ng-class="{'has-error': !$ctrl.cpwd.validResult}" for="cpwd">confirm password:</label>
+            <input type="password" class="form-control" id="cpwd" ng-model="$ctrl.cpwd.text">
+            <small class="form-text text-muted">{{$ctrl.cpwd.feedback}}</small>
+        </div>
+
+    <button type="submit" class="btn btn-default" ng-click="$ctrl.sendData()">Register</button>
+</form>
+
+</div>
