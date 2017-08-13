@@ -20,11 +20,9 @@ var schema = new Schema({
 });
 
 schema.pre('save', function(next) {
-    var doc = this;
     counter.findByIdAndUpdate({_id: 'categotyid'}, {$inc: { seq: 1} }, function(error, counter)   {
         if(error)
             return next(error);
-        doc.bid = counter.seq;
         next();
     });
 });
